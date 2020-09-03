@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../myservice.service'
 
 @Component({
   selector: 'app-publicrepo',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./publicrepo.component.css']
 })
 export class PublicrepoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  title = 'githubuser';
+  todaydate;
+  public userdata = []
+  constructor(private myservice:MyserviceService){}
+  ngOnInit(){
+    this.todaydate = this.myservice.showTodayDate();
+    this.myservice.getData().subscribe((data)=>{
+      this.userdata = Array.from(Object.keys(data),k=>data[k]);
+      console.log(this.userdata)
+    })
   }
-
 }

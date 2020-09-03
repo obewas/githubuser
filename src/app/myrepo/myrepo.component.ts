@@ -9,8 +9,9 @@ import { MyserviceService } from '../myservice.service'
 export class MyrepoComponent implements OnInit {
   newcomponent = "Entered in new component created";
   todaydate;
+  
   constructor(private myservice:MyserviceService) { }
-
+  
   ngOnInit() {
     this.todaydate = this.myservice.showTodayDate
   }

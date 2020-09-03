@@ -17,4 +17,8 @@ export class MyserviceService {
   getData(){
     return  this.http.get(this.apiUrl)
   }
+  user:string = "obewas"
+  getUser(){
+
+  }
 }

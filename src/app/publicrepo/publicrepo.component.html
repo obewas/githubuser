@@ -1,1 +1,33 @@
-<p>publicrepo works!</p>
+
+<div>
+    <p style="text-align: right;">{{todaydate}}</p>
+</div>
+<h3>Users Data</h3>
+
+<button value="select">Show Github Users</button>
+<table class="bordered table" ng-hide="getData()">
+   
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>User Login</th>
+      <th>User Avatar</th>
+      <th>User Repository</th>
+      
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor='let user of userdata'>
+      <td>{{user.id}}</td>
+      <td>{{user.login}}</td>
+      <td>{{user.avatar_url}}</td>
+      <td>{{user.repos_url}}</td>
+      
+
+    </tr>
+    
+  </tbody>
+
+</table>
+
