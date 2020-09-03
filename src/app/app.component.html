@@ -1,4 +1,5 @@
-<h2>GitHub Repo</h2>
+
+ <h2>GitHub Repo</h2>
 <nav>
   <a routerLink = "/myrepo">My Repository</a>
   <a routerLink = "/publicrepo">Public Github Repository</a>
@@ -6,6 +7,31 @@
 <div style="text-align: right;">
   {{todaydate}}
 </div>
+<h3>Users Data</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>User Login</th>
+      <th>User Avatar</th>
+      <th>User Repository</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor='let user of userdata'>
+      <td>{{user.id}}</td>
+      <td>{{user.login}}</td>
+      <td>{{user.avatar_url}}</td>
+      <td>{{user.repos_url}}</td>
+
+    </tr>
+    
+  </tbody>
+
+</table>
+
 
 
 

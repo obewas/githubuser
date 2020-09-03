@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyrepoComponent } from './myrepo/myrepo.component';
 import { PublicrepoComponent } from './publicrepo/publicrepo.component';
 import { MyserviceService } from './myservice.service'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MyserviceService } from './myservice.service'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
