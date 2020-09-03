@@ -1,0 +1,10 @@
+a:link, a:visited {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover, a:active {
+    background-color: maroon;
+}
